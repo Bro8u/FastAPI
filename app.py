@@ -44,3 +44,6 @@ def total_balance():
 def slice(limit: int, id: int, skip: int = 0):
     return fake_database["users"][skip: skip + limit][id]
 
+
+
+
