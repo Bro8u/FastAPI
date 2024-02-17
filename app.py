@@ -40,4 +40,7 @@ def total_balance():
         balance_sum += pydantic_models.Users(**user).balance
     return balance_sum
 
+@app.get("/slice/{id}")
+def slice(limit: int, id: int, skip: int = 0):
+    return fake_database["users"][skip: skip + limit][id]
 
